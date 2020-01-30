@@ -1,12 +1,8 @@
-import MyProgs.Answers;
-import MyProgs.StartProg;
-import org.apache.log4j.PropertyConfigurator;
+import parse.RequestParser;
 import org.telegram.telegrambots.ApiContextInitializer;
 import org.telegram.telegrambots.bots.TelegramLongPollingBot;
 import org.telegram.telegrambots.meta.TelegramBotsApi;
-import org.telegram.telegrambots.meta.api.methods.groupadministration.SetChatTitle;
 import org.telegram.telegrambots.meta.api.methods.send.SendMessage;
-import org.telegram.telegrambots.meta.api.objects.Chat;
 import org.telegram.telegrambots.meta.api.objects.Message;
 import org.telegram.telegrambots.meta.api.objects.Update;
 
@@ -15,12 +11,11 @@ import org.telegram.telegrambots.meta.exceptions.TelegramApiRequestException;
 import personal.BotName;
 
 
-public class MyBot extends TelegramLongPollingBot implements Answers, BotName {
+public class MyBot extends TelegramLongPollingBot implements BotName {
 
+    private RequestParser requestParser;
 
-
-    RequestParser requestParser;
-    public static void main(String[] args) throws TelegramApiRequestException {
+    public static void main(String[] args)  {
         ApiContextInitializer.init(); // Инициализируем апи
         TelegramBotsApi botapi = new TelegramBotsApi();
         try {

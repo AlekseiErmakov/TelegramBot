@@ -1,12 +1,10 @@
-import MyProgs.Answers;
-import MyProgs.StartProg;
-
+import parse.RequestParser;
 import org.junit.*;
 
 
 import static org.junit.Assert.assertEquals;
 
-public class MainBotTest implements Answers {
+public class MainBotTest  {
 
     @Test
     public void testFirst(){

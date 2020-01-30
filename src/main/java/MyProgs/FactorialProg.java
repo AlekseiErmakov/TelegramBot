@@ -1,6 +1,8 @@
 package MyProgs;
 
-public class FactorialProg implements Program{
+import MyProgs.inteface.Program;
+
+public class FactorialProg implements Program {
     @Override
     public String getCommand() {
         return "Напиши число и я посчитаю его факториал";

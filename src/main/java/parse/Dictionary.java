@@ -1,8 +1,5 @@
+package parse;
 
-
-import lombok.Getter;
-
-import java.io.PrintWriter;
 import java.util.*;
 
 
@@ -63,7 +60,7 @@ public class Dictionary {
         return secret;
     }
     private List<String> makeCommand(){
-        String[] commands = {"/commands","/reverse","/math","/piramide","/emoji","/factorial"};
+        String[] commands = {"/commands","/reverse","/math","/piramide","/emoji","/factorial","/password"};
         return Arrays.asList(commands);
     }
     private int getRandom(List<String> col){

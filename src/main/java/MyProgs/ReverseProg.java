@@ -1,5 +1,7 @@
 package MyProgs;
 
+import MyProgs.inteface.Program;
+
 public class ReverseProg implements Program {
     @Override
     public String getCommand() {

@@ -1,9 +1,9 @@
-import MyProgs.FactorialProg;
-import MyProgs.Program;
-import MyProgs.ReverseProg;
+package parse;
 
-import java.lang.reflect.Type;
-import java.util.*;
+import MyProgs.FactorialProg;
+import MyProgs.RandomPasProg;
+import MyProgs.ReverseProg;
+import MyProgs.inteface.Program;
 
 
 public class RequestParser {
@@ -13,6 +13,7 @@ public class RequestParser {
     private static final String STOP = "/stop";
     private static final String REVERSE = "/reverse";
     private static final String FACTORIAL = "/factorial";
+    private static final String PASSWORD = "/password";
     private static final String PROGSTOP = "Программа остановлена!";
     private static final String NONESTOP = "Мне нечего остановить!";
 
@@ -45,6 +46,9 @@ public class RequestParser {
                 break;
             case (FACTORIAL):
                 program = new FactorialProg();
+                break;
+            case (PASSWORD):
+                program = new RandomPasProg();
                 break;
         }
         return program;
