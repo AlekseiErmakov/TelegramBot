@@ -8,10 +8,11 @@ import org.telegram.telegrambots.meta.api.objects.Update;
 
 import org.telegram.telegrambots.meta.exceptions.TelegramApiException;
 import org.telegram.telegrambots.meta.exceptions.TelegramApiRequestException;
-import personal.BotName;
+
+import personal.MyPersonal;
 
 
-public class MyBot extends TelegramLongPollingBot implements BotName {
+public class MyBot extends TelegramLongPollingBot implements MyPersonal {
 
     private RequestParser requestParser;
 
