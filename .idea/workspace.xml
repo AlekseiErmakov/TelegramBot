@@ -2,18 +2,12 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="f1e03451-c31e-4a5c-b313-c45e1bad69f8" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/target/classes/MyProgs/util/DOMxmlReader.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Valute.xml" beforeDir="false" afterPath="$PROJECT_DIR$/Valute.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/MyBot.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/MyBot.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/MyProgs/DOMxmlReader.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/MyProgs/util/DOMxmlReader.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/MyProgs/DownLoader.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/MyProgs/util/DownLoader.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/MyProgs/ValuteProg.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/MyProgs/ValuteProg.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/ValuteTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/ValuteTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/MyBot.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/MyBot.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/MyProgs/DOMxmlReader.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/MyProgs/DownLoader.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/MyProgs/util/DownLoader.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/MyProgs/ValuteProg.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/MyProgs/ValuteProg.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/test-classes/ValuteTest.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/test-classes/ValuteTest.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/MyProgs/util/DOMxmlReader.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/MyProgs/util/DOMxmlReader.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/parse/RequestParser.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/parse/RequestParser.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/MainBotTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/MainBotTest.java" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <ignored path="$PROJECT_DIR$/target/" />
@@ -46,10 +40,37 @@
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/MyProgs/FactorialProg.java">
+        <entry file="file://$PROJECT_DIR$/src/main/java/MyBot.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="272">
-              <caret line="18" column="26" selection-start-line="18" selection-start-column="26" selection-end-line="18" selection-end-column="63" />
+            <state relative-caret-position="55">
+              <caret line="39" column="70" lean-forward="true" selection-start-line="39" selection-start-column="70" selection-end-line="39" selection-end-column="70" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/test/java/MainBotTest.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="833">
+              <caret line="49" column="5" selection-start-line="49" selection-start-column="5" selection-end-line="49" selection-end-column="5" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/test/java/ValuteTest.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="323">
+              <caret line="19" lean-forward="true" selection-start-line="19" selection-end-line="19" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -57,11 +78,32 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/parse/RequestParser.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="928">
-              <caret line="57" column="30" selection-start-line="57" selection-start-column="30" selection-end-line="57" selection-end-column="30" />
+            <state relative-caret-position="208">
+              <caret line="37" column="53" selection-start-line="37" selection-start-column="53" selection-end-line="37" selection-end-column="53" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/MyProgs/util/DownLoader.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="68">
+              <caret line="8" column="13" selection-start-line="8" selection-start-column="13" selection-end-line="8" selection-end-column="13" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/parse/Dictionary.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="350">
+              <caret line="62" column="114" selection-start-line="62" selection-start-column="114" selection-end-line="62" selection-end-column="114" />
             </state>
           </provider>
         </entry>
@@ -76,31 +118,10 @@
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/MyProgs/RandomPasProg.java">
+        <entry file="file://$PROJECT_DIR$/src/main/java/MyProgs/ValuteProg.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="529">
-              <caret line="56" column="15" selection-start-line="56" selection-start-column="15" selection-end-line="56" selection-end-column="15" />
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/MyProgs/ReverseProg.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="412">
-              <caret line="41" column="29" selection-start-line="41" selection-start-column="29" selection-end-line="41" selection-end-column="29" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/test/java/MainBotTest.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="102">
-              <caret line="6" column="13" selection-start-line="6" selection-start-column="13" selection-end-line="6" selection-end-column="13" />
+            <state relative-caret-position="170">
+              <caret line="19" column="26" selection-start-line="19" selection-start-column="26" selection-end-line="19" selection-end-column="26" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -111,22 +132,12 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/main/java/MyProgs/util/DOMxmlReader.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="279">
-              <caret line="61" column="19" lean-forward="true" selection-start-line="52" selection-start-column="12" selection-end-line="61" selection-end-column="19" />
+            <state relative-caret-position="-795">
+              <caret line="19" column="35" selection-start-line="19" selection-start-column="35" selection-end-line="19" selection-end-column="35" />
               <folding>
                 <element signature="imports" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/MyProgs/bean/Valute.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="430">
-              <caret line="36" column="26" lean-forward="true" selection-start-line="36" selection-start-column="26" selection-end-line="36" selection-end-column="26" />
-              <folding>
-                <element signature="imports" expanded="true" />
+                <element signature="e#629#630#0" expanded="true" />
+                <element signature="e#676#677#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -144,15 +155,6 @@
                 <element signature="e#749#750#0" expanded="true" />
                 <element signature="e#776#777#0" expanded="true" />
               </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/MyProgs/inteface/Program.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="34">
-              <caret line="2" column="25" selection-start-line="2" selection-start-column="25" selection-end-line="2" selection-end-column="25" />
             </state>
           </provider>
         </entry>
@@ -193,7 +195,6 @@
         <option value="$PROJECT_DIR$/src/main/java/MyProgs/RandomPasProg.java" />
         <option value="$PROJECT_DIR$/src/main/java/MyProgs/inteface/Program.java" />
         <option value="$PROJECT_DIR$/src/main/java/personal/MyPersonal.java" />
-        <option value="$PROJECT_DIR$/src/test/java/MainBotTest.java" />
         <option value="$PROJECT_DIR$/src/main/java/MyProgs/Valute.java" />
         <option value="$PROJECT_DIR$/Valute.xml" />
         <option value="$PROJECT_DIR$/Valute1.xml" />
@@ -201,15 +202,16 @@
         <option value="$PROJECT_DIR$/src/main/java/DOMxmlReader.java" />
         <option value="$PROJECT_DIR$/src/main/java/parse/Dictionary.java" />
         <option value="$PROJECT_DIR$/src/main/java/MyProgs/data/ValuteList.java" />
-        <option value="$PROJECT_DIR$/src/main/java/parse/RequestParser.java" />
         <option value="$PROJECT_DIR$/src/main/java/MyProgs/bean/Valute.java" />
         <option value="$PROJECT_DIR$/src/main/java/MyProgs/DOMxmlReader.java" />
         <option value="$PROJECT_DIR$/src/main/java/MyProgs/DownLoader.java" />
-        <option value="$PROJECT_DIR$/src/main/java/MyBot.java" />
         <option value="$PROJECT_DIR$/src/main/java/MyProgs/util/DownLoader.java" />
-        <option value="$PROJECT_DIR$/src/main/java/MyProgs/ValuteProg.java" />
         <option value="$PROJECT_DIR$/src/test/java/ValuteTest.java" />
+        <option value="$PROJECT_DIR$/src/main/java/MyProgs/ValuteProg.java" />
         <option value="$PROJECT_DIR$/src/main/java/MyProgs/util/DOMxmlReader.java" />
+        <option value="$PROJECT_DIR$/src/test/java/MainBotTest.java" />
+        <option value="$PROJECT_DIR$/src/main/java/MyBot.java" />
+        <option value="$PROJECT_DIR$/src/main/java/parse/RequestParser.java" />
       </list>
     </option>
   </component>
@@ -464,7 +466,7 @@
       <workItem from="1580370097226" duration="15996000" />
       <workItem from="1580390755195" duration="599000" />
       <workItem from="1580397155438" duration="14206000" />
-      <workItem from="1580454791563" duration="11644000" />
+      <workItem from="1580454791563" duration="13176000" />
     </task>
     <task id="LOCAL-00001" summary="ddg">
       <created>1580387330999</created>
@@ -509,13 +511,13 @@
     </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="62525000" />
+    <option name="totallyTimeSpent" value="64057000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" sideWeight="0.49834436" visible="true" weight="0.1609808" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" sideWeight="0.49834436" visible="true" weight="0.1609808" />
       <window_info id="Structure" order="1" sideWeight="0.50165564" side_tool="true" weight="0.22707888" />
       <window_info id="Designer" order="2" />
       <window_info id="DB Browser" order="3" />
@@ -525,7 +527,7 @@
       <window_info id="Image Layers" order="7" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" weight="0.32963374" />
-      <window_info anchor="bottom" id="Run" order="2" weight="0.31964484" />
+      <window_info anchor="bottom" id="Run" order="2" visible="true" weight="0.31964484" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.39887005" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
@@ -534,11 +536,11 @@
       <window_info anchor="bottom" id="Database Changes" order="8" />
       <window_info anchor="bottom" id="Docker" order="9" show_stripe_button="false" />
       <window_info anchor="bottom" id="Event Log" order="10" side_tool="true" />
-      <window_info anchor="bottom" id="Messages" order="11" weight="0.32881355" />
+      <window_info anchor="bottom" id="Messages" order="11" weight="0.32852387" />
       <window_info anchor="bottom" id="Java Enterprise" order="12" weight="0.32963374" />
       <window_info anchor="bottom" id="SQL" order="13" />
       <window_info anchor="bottom" id="Version Control" order="14" weight="0.3299435" />
-      <window_info active="true" anchor="bottom" id="Terminal" order="15" visible="true" weight="0.33518314" />
+      <window_info anchor="bottom" id="Terminal" order="15" weight="0.33518314" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
@@ -630,63 +632,6 @@
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/Valute1.xml" />
-    <entry file="file://$PROJECT_DIR$/src/main/java/parse/Dictionary.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="565">
-          <caret line="62" column="114" selection-start-line="62" selection-start-column="114" selection-end-line="62" selection-end-column="114" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/MyProgs/util/DownLoader.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="136">
-          <caret line="8" column="13" selection-start-line="8" selection-start-column="13" selection-end-line="8" selection-end-column="13" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/MyBot.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="209">
-          <caret line="31" column="37" selection-start-line="31" selection-start-column="37" selection-end-line="31" selection-end-column="37" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/MyProgs/ValuteProg.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-624">
-          <caret line="42" column="29" lean-forward="true" selection-start-line="42" selection-start-column="29" selection-end-line="42" selection-end-column="29" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/test/java/ValuteTest.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="408">
-          <caret line="24" lean-forward="true" selection-start-line="24" selection-end-line="24" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/test/java/MainBotTest.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="102">
-          <caret line="6" column="13" selection-start-line="6" selection-start-column="13" selection-end-line="6" selection-end-column="13" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/MyProgs/bean/Valute.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="430">
@@ -749,10 +694,67 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/MyProgs/util/DownLoader.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="68">
+          <caret line="8" column="13" selection-start-line="8" selection-start-column="13" selection-end-line="8" selection-end-column="13" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/java/MainBotTest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="833">
+          <caret line="49" column="5" selection-start-line="49" selection-start-column="5" selection-end-line="49" selection-end-column="5" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/java/ValuteTest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="323">
+          <caret line="19" lean-forward="true" selection-start-line="19" selection-end-line="19" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/MyBot.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="55">
+          <caret line="39" column="70" lean-forward="true" selection-start-line="39" selection-start-column="70" selection-end-line="39" selection-end-column="70" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/parse/RequestParser.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="928">
-          <caret line="57" column="30" selection-start-line="57" selection-start-column="30" selection-end-line="57" selection-end-column="30" />
+        <state relative-caret-position="208">
+          <caret line="37" column="53" selection-start-line="37" selection-start-column="53" selection-end-line="37" selection-end-column="53" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/parse/Dictionary.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="350">
+          <caret line="62" column="114" selection-start-line="62" selection-start-column="114" selection-end-line="62" selection-end-column="114" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/MyProgs/ValuteProg.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="170">
+          <caret line="19" column="26" selection-start-line="19" selection-start-column="26" selection-end-line="19" selection-end-column="26" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
@@ -761,10 +763,12 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/MyProgs/util/DOMxmlReader.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="279">
-          <caret line="61" column="19" lean-forward="true" selection-start-line="52" selection-start-column="12" selection-end-line="61" selection-end-column="19" />
+        <state relative-caret-position="-795">
+          <caret line="19" column="35" selection-start-line="19" selection-start-column="35" selection-end-line="19" selection-end-column="35" />
           <folding>
             <element signature="imports" expanded="true" />
+            <element signature="e#629#630#0" expanded="true" />
+            <element signature="e#676#677#0" expanded="true" />
           </folding>
         </state>
       </provider>

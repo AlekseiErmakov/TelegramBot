@@ -1,4 +1,5 @@
 import MyProgs.util.DownLoader;
+import org.telegram.telegrambots.meta.api.objects.Chat;
 import parse.RequestParser;
 import org.telegram.telegrambots.ApiContextInitializer;
 import org.telegram.telegrambots.bots.TelegramLongPollingBot;
@@ -39,9 +40,10 @@ public class MyBot extends TelegramLongPollingBot implements MyPersonal {
             if (update.hasMessage() && update.getMessage().hasText()){
 
                 Message inMessage = update.getMessage();
+                Chat chat = inMessage.getChat();
                 SendMessage outMessage = new SendMessage();
                 outMessage.setChatId(inMessage.getChatId());
-                outMessage.setText(requestParser.getResult(inMessage.getText()));
+                outMessage.setText(requestParser.getResult(inMessage.getText(),chat.getFirstName()));
 
                 execute(outMessage);
             }

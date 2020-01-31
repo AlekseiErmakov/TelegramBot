@@ -17,6 +17,7 @@ public class ValuteProg implements Program {
     private List<String> valutes;
     public ValuteProg(){
         readerXML = new DOMxmlReader();
+        readerXML.parse();
         valuteList = ValuteList.getInstance();
     }
     @Override

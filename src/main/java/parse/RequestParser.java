@@ -24,7 +24,7 @@ public class RequestParser {
 
     }
 
-    public String getResult(String request) {
+    public String getResult(String request, String name) {
         if (isRun && request.equals(STOP)) {
             isRun = false;
             return PROGSTOP;
@@ -35,7 +35,7 @@ public class RequestParser {
             isRun = true;
             return program.getCommand();
         } else if (!isRun && dictionary.isFrase(request)) {
-            return dictionary.getAnswer(request);
+            return dictionary.getAnswer(request) + ", " + name;
         } else if (isRun) {
             return program.getResult(request);
         }

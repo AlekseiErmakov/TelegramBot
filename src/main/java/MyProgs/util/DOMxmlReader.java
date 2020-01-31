@@ -13,31 +13,35 @@ import javax.xml.parsers.DocumentBuilder;
 import javax.xml.parsers.DocumentBuilderFactory;
 import javax.xml.parsers.ParserConfigurationException;
 import java.io.*;
-import java.net.URL;
-import java.nio.channels.Channels;
-import java.nio.channels.ReadableByteChannel;
+
 
 public class DOMxmlReader {
     private static final String filepath = "Valute.xml";
+    private static final String TAG = "Valute";
     ValuteList list;
 
     public DOMxmlReader (){
-
-        parseXML();
+        list = ValuteList.getInstance();
     }
 
+    public void parse(){
+        if (list.getList().size() > 0){
+            updateValue();
+        } else{
+            parseXML();
+        }
 
+    }
     private NodeList getNodelist(){
         File xmlFile = new File(filepath);
         DocumentBuilderFactory factory = DocumentBuilderFactory.newInstance();
         DocumentBuilder builder;
-        list = ValuteList.getInstance();
         NodeList nodeList = null;
         try{
             builder = factory.newDocumentBuilder();
             Document document = builder.parse(xmlFile);
             document.getDocumentElement().normalize();
-            nodeList = document.getElementsByTagName("Valute");
+            nodeList = document.getElementsByTagName(TAG);
         } catch (IOException e) {
             e.printStackTrace();
         } catch (ParserConfigurationException e) {
@@ -50,19 +54,7 @@ public class DOMxmlReader {
     private void parseXML(){
         NodeList nodeList = getNodelist();
         for (int i = 0; i < nodeList.getLength(); i++){
-            Valute valute = getNewValute(nodeList.item(i));
-            Valute inListValute = null;
-            if (list.getList().size()>0){
-                inListValute = list.getValute(valute.getName());
-            }
-
-            if(inListValute != null &&valute.getNumCode() == inListValute.getNumCode()){
-                inListValute.setValue(valute.getValue());
-                inListValute.setNominal(valute.getNominal());
-            }else {
-                list.addValute(getNewValute(nodeList.item(i)));
-            }
-
+            list.addValute(getNewValute(nodeList.item(i)));
         }
 
     }
