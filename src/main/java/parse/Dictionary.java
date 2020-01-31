@@ -60,7 +60,7 @@ public class Dictionary {
         return secret;
     }
     private List<String> makeCommand(){
-        String[] commands = {"/commands","/reverse","/math","/piramide","/emoji","/factorial","/password"};
+        String[] commands = {"/commands","/reverse","/math","/piramide","/emoji","/factorial","/password","/valute"};
         return Arrays.asList(commands);
     }
     private int getRandom(List<String> col){

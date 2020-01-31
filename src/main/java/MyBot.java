@@ -1,3 +1,4 @@
+import MyProgs.DownLoader;
 import parse.RequestParser;
 import org.telegram.telegrambots.ApiContextInitializer;
 import org.telegram.telegrambots.bots.TelegramLongPollingBot;
@@ -15,6 +16,7 @@ import personal.MyPersonal;
 public class MyBot extends TelegramLongPollingBot implements MyPersonal {
 
     private RequestParser requestParser;
+    private Thread downlowder;
 
     public static void main(String[] args)  {
         ApiContextInitializer.init(); // Инициализируем апи
@@ -28,6 +30,8 @@ public class MyBot extends TelegramLongPollingBot implements MyPersonal {
     }
     public MyBot(){
         requestParser = new RequestParser();
+        downlowder = new Thread(new DownLoader());
+        downlowder.start();
     }
 
     @Override
