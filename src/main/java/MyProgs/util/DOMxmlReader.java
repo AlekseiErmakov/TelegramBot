@@ -1,4 +1,4 @@
-package MyProgs;
+package MyProgs.util;
 
 import MyProgs.data.ValuteList;
 import MyProgs.bean.Valute;
@@ -50,7 +50,19 @@ public class DOMxmlReader {
     private void parseXML(){
         NodeList nodeList = getNodelist();
         for (int i = 0; i < nodeList.getLength(); i++){
-            list.addValute(getNewValute(nodeList.item(i)));
+            Valute valute = getNewValute(nodeList.item(i));
+            Valute inListValute = null;
+            if (list.getList().size()>0){
+                inListValute = list.getValute(valute.getName());
+            }
+
+            if(inListValute != null &&valute.getNumCode() == inListValute.getNumCode()){
+                inListValute.setValue(valute.getValue());
+                inListValute.setNominal(valute.getNominal());
+            }else {
+                list.addValute(getNewValute(nodeList.item(i)));
+            }
+
         }
 
     }

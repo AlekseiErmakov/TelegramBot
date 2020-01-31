@@ -1,4 +1,4 @@
-package MyProgs;
+package MyProgs.util;
 
 import java.io.FileOutputStream;
 import java.io.IOException;
