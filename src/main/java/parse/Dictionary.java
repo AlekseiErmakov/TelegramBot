@@ -19,25 +19,27 @@ public class Dictionary {
         secret = makeSecretAns();
         commands = makeCommand();
     }
-    public boolean isFrase(String request){
-        request = request.toLowerCase();
-        boolean g = greetigs.contains(request);
-        boolean f = farewels.contains(request);
-        boolean s = secret.containsKey(request);
-        return g || f || s;
+    public String getCommandList(){
+        StringBuilder sb = new StringBuilder();
+        sb.append("/rcat - и пришлю котика ");
+        sb.append("\n");
+        sb.append("/reverse  \"фраза\" и я переверну в ней слова наобарот");
+        sb.append("\n");
+        sb.append("/factorial \"число\"- и я посчитаю факториал");
+        sb.append("\n");
+        sb.append("/password \"кол-во символов\" - и я сгенерирую пароль");
+        sb.append("\n");
+        sb.append("/valute \"название\" - и я напишу ее курс");
+        return sb.toString();
     }
-    public boolean isCommand(String request){
-        return commands.contains(request);
+    public boolean isGreeting(String request){
+        return greetigs.contains(request);
     }
-    public String getAnswer(String request){
-        request = request.toLowerCase();
-        if (greetigs.contains(request)){
-            return greetigs.get(getRandom(greetigs));
-        }else if (farewels.contains(request)){
-            return farewels.get(getRandom(farewels));
-        } else{
-            return secret.get(request);
-        }
+    public boolean isFarewell(String request){
+        return greetigs.contains(request);
+    }
+    public boolean isSecretAnswer(String request){
+        return secret.containsKey(request);
     }
     private List<String> makeGreetings(){
         String[] greet = {"привет","прива","здорово","здорова","здравствуйте","привет бот","здравствуй","хай",
@@ -60,8 +62,18 @@ public class Dictionary {
         return secret;
     }
     private List<String> makeCommand(){
-        String[] commands = {"/commands","/reverse","/math","/piramide","/emoji","/factorial","/password","/valute"};
+        String[] commands = {"/commands","/reverse","/math","/factorial","/password","/valute","/rcat"};
         return Arrays.asList(commands);
+    }
+    public String getAnswer(String request){
+        if (isGreeting(request)){
+            return greetigs.get(getRandom(greetigs));
+        } else if (isFarewell(request)){
+            return farewels.get(getRandom(farewels));
+        } else if (isSecretAnswer(request)){
+            return secret.get(request);
+        }
+        return "";
     }
     private int getRandom(List<String> col){
         Random r = new Random();

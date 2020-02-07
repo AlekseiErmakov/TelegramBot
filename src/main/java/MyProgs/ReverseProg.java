@@ -1,19 +1,19 @@
 package MyProgs;
 
+import MyProgs.inteface.AbsProg;
 import MyProgs.inteface.Program;
 
-public class ReverseProg implements Program {
-    @Override
-    public String getCommand() {
-        return "Введите фразу и я переверну слова наобарот!";
-    }
+public class ReverseProg extends AbsProg {
+
 
     @Override
-    public String getResult(String Finput) {
+    public String getResult(String message) {
         String result = "Неверный ввод";
-        if (Finput != null && Finput.length() > 0){
-            result = changeStr(Finput);
+        String userRequest = getUserRequest(message);
+        if (!userRequest.equals("")){
+            result = changeStr(userRequest);
         }
+
         return result;
     }
     private String changeStr(String string){

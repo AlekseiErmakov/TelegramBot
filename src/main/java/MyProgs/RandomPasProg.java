@@ -1,22 +1,19 @@
 package MyProgs;
 
+import MyProgs.inteface.AbsProg;
 import MyProgs.inteface.Program;
 
 import java.io.ByteArrayOutputStream;
 import java.util.Random;
 
-public class RandomPasProg implements Program {
-
-    @Override
-    public String getCommand() {
-        return "Введите длину пароля";
-    }
+public class RandomPasProg extends AbsProg {
 
     @Override
     public String getResult(String request) {
         String result = "Некорректное число";
+        String userRequest = getUserRequest(request);
         try {
-            int num = Integer.parseInt(request);
+            int num = Integer.parseInt(userRequest);
             if (num > 0){
                 result = getPassword(num);
             }else {

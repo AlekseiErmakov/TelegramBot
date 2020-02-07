@@ -1,18 +1,16 @@
 package MyProgs;
 
+import MyProgs.inteface.AbsProg;
 import MyProgs.inteface.Program;
 
-public class FactorialProg implements Program {
-    @Override
-    public String getCommand() {
-        return "Напиши число и я посчитаю его факториал";
-    }
+public class FactorialProg extends AbsProg {
 
     @Override
     public String getResult(String request) {
+        String userRequest = getUserRequest(request);
         String result = "";
         try {
-            int num = Integer.parseInt(request);
+            int num = Integer.parseInt(userRequest);
             if (num > 0){
                 result = String.valueOf(factorial(num));
             } else {
@@ -32,4 +30,5 @@ public class FactorialProg implements Program {
         result = n * factorial(n-1);
         return result;
     }
+
 }

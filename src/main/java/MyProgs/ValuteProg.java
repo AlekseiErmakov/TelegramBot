@@ -2,43 +2,41 @@ package MyProgs;
 
 import MyProgs.bean.Valute;
 import MyProgs.data.ValuteList;
+import MyProgs.inteface.AbsProg;
 import MyProgs.inteface.Program;
 import MyProgs.util.DOMxmlReader;
 
 import java.util.ArrayList;
 import java.util.List;
 
-public class ValuteProg implements Program {
-    private static final String TITLE = "Напиши название валюты и я скажу ее курс или /currencies для получения списка";
+public class ValuteProg extends AbsProg {
+    private static final String ADRESS = "https://www.cbr-xml-daily.ru/daily_utf8.xml";
+
     private static final String LIST = "/currencies";
     private static final String LISTTITLE = "Вот список валют: ";
     private ValuteList valuteList;
     private DOMxmlReader readerXML;
     private List<String> valutes;
     public ValuteProg(){
-        readerXML = new DOMxmlReader();
-        readerXML.parse();
         valuteList = ValuteList.getInstance();
     }
-    @Override
-    public String getCommand() {
-        return TITLE;
-    }
+
 
     @Override
     public String getResult(String request) {
-        if (request.equals(LIST)){
+        String userRequest = getUserRequest(request);
+        if (userRequest.equals(LIST)){
             return LISTTITLE + "\n" + getValuteComandList();
         } else {
             for (Valute valute : valuteList.getList()){
-                if (request.equalsIgnoreCase(valute.getName())){
+                if (userRequest.equalsIgnoreCase(valute.getName())){
                     return valute.toString();
                 }
             }
-            request = request.toLowerCase();
-            String Start = getStart(request,valuteList.getList());
-            String End = getEnd(request,valuteList.getList());
-            String Sub = getContain(request,valuteList.getList());
+            userRequest = userRequest.toLowerCase();
+            String Start = getStart(userRequest,valuteList.getList());
+            String End = getEnd(userRequest,valuteList.getList());
+            String Sub = getContain(userRequest,valuteList.getList());
 
             if (!Start.equals("") && !End.equals("")){
                 return Start + End;

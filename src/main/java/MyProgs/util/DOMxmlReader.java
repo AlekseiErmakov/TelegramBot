@@ -2,6 +2,7 @@ package MyProgs.util;
 
 import MyProgs.data.ValuteList;
 import MyProgs.bean.Valute;
+import org.glassfish.jersey.server.Uri;
 import org.w3c.dom.Document;
 import org.w3c.dom.Element;
 import org.w3c.dom.Node;
@@ -9,37 +10,45 @@ import org.w3c.dom.NodeList;
 import org.xml.sax.SAXException;
 
 
+import javax.print.DocFlavor;
 import javax.xml.parsers.DocumentBuilder;
 import javax.xml.parsers.DocumentBuilderFactory;
 import javax.xml.parsers.ParserConfigurationException;
 import java.io.*;
+import java.net.URL;
 
 
-public class DOMxmlReader {
-    private static final String filepath = "Valute.xml";
+public class DOMxmlReader implements Runnable{
+
+    private static final String VALUTE = "https://www.cbr-xml-daily.ru/daily_utf8.xml";
     private static final String TAG = "Valute";
-    ValuteList list;
+    private ValuteList list;
 
     public DOMxmlReader (){
         list = ValuteList.getInstance();
     }
 
-    public void parse(){
+    @Override
+    public void run() {
+        updateList();
+    }
+
+    private void updateList(){
         if (list.getList().size() > 0){
             updateValue();
         } else{
             parseXML();
         }
-
     }
-    private NodeList getNodelist(){
-        File xmlFile = new File(filepath);
+    public NodeList getNodelist(String adress){
+
         DocumentBuilderFactory factory = DocumentBuilderFactory.newInstance();
         DocumentBuilder builder;
         NodeList nodeList = null;
         try{
             builder = factory.newDocumentBuilder();
-            Document document = builder.parse(xmlFile);
+            URL url = new URL(adress);
+            Document document = builder.parse(url.openStream());
             document.getDocumentElement().normalize();
             nodeList = document.getElementsByTagName(TAG);
         } catch (IOException e) {
@@ -52,7 +61,7 @@ public class DOMxmlReader {
         return nodeList;
     }
     private void parseXML(){
-        NodeList nodeList = getNodelist();
+        NodeList nodeList = getNodelist(VALUTE);
         for (int i = 0; i < nodeList.getLength(); i++){
             list.addValute(getNewValute(nodeList.item(i)));
         }
@@ -60,7 +69,7 @@ public class DOMxmlReader {
     }
     public void updateValue(){
 
-        NodeList nodeList = getNodelist();
+        NodeList nodeList = getNodelist(VALUTE);
         for (int i = 0; i < nodeList.getLength(); i++){
             Element element = (Element) nodeList.item(i);
             String name = getTagValue("Name",element);
