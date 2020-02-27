@@ -47,7 +47,7 @@ public enum  Commands {
     public String getDescription(){
         StringBuilder sb = new StringBuilder();
         sb.append("/");
-        sb.append(name());
+        sb.append(name().toLowerCase());
         sb.append(" ");
         return sb.toString();
     }

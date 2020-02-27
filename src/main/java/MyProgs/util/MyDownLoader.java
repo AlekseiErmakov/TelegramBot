@@ -22,7 +22,7 @@ public class MyDownLoader {
     }
     public static String downloadString(String adress){
         String result = "";
-        InputStream inp = getInputStrem(adress);
+        InputStream inp = getInputStream(adress);
         StringBuilder sb = new StringBuilder();
         try (BufferedReader reader = new BufferedReader(new InputStreamReader(inp))){
             String inputlane;
@@ -35,7 +35,7 @@ public class MyDownLoader {
         }
         return result;
     }
-    private static InputStream getInputStrem(String adress){
+    private static InputStream getInputStream(String adress){
         InputStream inputStream = null;
         try {
             URL url = new URL(adress);

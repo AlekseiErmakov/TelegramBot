@@ -32,4 +32,5 @@ public class ValuteList {
     public List<Valute> getList(){
         return list;
     }
+
 }

@@ -10,12 +10,12 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class ValuteProg extends AbsProg {
-    private static final String ADRESS = "https://www.cbr-xml-daily.ru/daily_utf8.xml";
+
 
     private static final String LIST = "/currencies";
     private static final String LISTTITLE = "Вот список валют: ";
     private ValuteList valuteList;
-    private DOMxmlReader readerXML;
+
     private List<String> valutes;
     public ValuteProg(){
         valuteList = ValuteList.getInstance();
@@ -104,8 +104,5 @@ public class ValuteProg extends AbsProg {
         }
         return sb.toString();
     }
-    private String getsub(String request, List<Valute> list){
-        StringBuilder sb = new StringBuilder();
-        return "";
-    }
+
 }

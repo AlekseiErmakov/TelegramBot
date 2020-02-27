@@ -1,5 +1,7 @@
 package parse;
 
+import org.telegram.telegrambots.meta.api.objects.Message;
+
 import java.util.*;
 
 
@@ -9,7 +11,7 @@ public class Dictionary {
 
     private List<String> farewels;
 
-    private List<String> commands;
+
 
     private Map<String,String> secret;
 
@@ -17,21 +19,10 @@ public class Dictionary {
         greetigs = makeGreetings();
         farewels = makeFarewels();
         secret = makeSecretAns();
-        commands = makeCommand();
+
+
     }
-    public String getCommandList(){
-        StringBuilder sb = new StringBuilder();
-        sb.append("/rcat - и пришлю котика ");
-        sb.append("\n");
-        sb.append("/reverse  \"фраза\" и я переверну в ней слова наобарот");
-        sb.append("\n");
-        sb.append("/factorial \"число\"- и я посчитаю факториал");
-        sb.append("\n");
-        sb.append("/password \"кол-во символов\" - и я сгенерирую пароль");
-        sb.append("\n");
-        sb.append("/valute \"название\" - и я напишу ее курс");
-        return sb.toString();
-    }
+
     public boolean isGreeting(String request){
         return greetigs.contains(request);
     }
@@ -41,6 +32,10 @@ public class Dictionary {
     public boolean isSecretAnswer(String request){
         return secret.containsKey(request);
     }
+    public boolean isKnown(String request){
+        return isGreeting(request) || isFarewell(request) || isSecretAnswer(request);
+    }
+
     private List<String> makeGreetings(){
         String[] greet = {"привет","прива","здорово","здорова","здравствуйте","привет бот","здравствуй","хай",
                 "дороу","привки","добрый день","добрый вечер","доброй ночи","доброе устро","hello","здоровеньки булы",
@@ -61,10 +56,7 @@ public class Dictionary {
         secret.put("вперед черепахи","кавабунга!!!!");
         return secret;
     }
-    private List<String> makeCommand(){
-        String[] commands = {"/commands","/reverse","/math","/factorial","/password","/valute","/rcat"};
-        return Arrays.asList(commands);
-    }
+
     public String getAnswer(String request){
         if (isGreeting(request)){
             return greetigs.get(getRandom(greetigs));
